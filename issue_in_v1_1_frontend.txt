@@ -1,0 +1,2 @@
+1. After start trip is not automatic refresh.
+2. device map on the dashboard not show the all device.
