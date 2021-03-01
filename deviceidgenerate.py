@@ -27,14 +27,15 @@ parser.add_argument('-cap', '--capacity', required=True,
 
 args = parser.parse_args()
 # the required first parameter of the 'get' method is the 'url':
-# my_list = []
-# for i in range(50):
-x = requests.get('https://44.233.13.28:3000/api/v1.0/generate/deviceid', json={
+my_list = []
+for i in range(50):
+    x = requests.get('https://localhost:3000/api/v1.0/generate/deviceid', json={
     "monthyear": args.manufacturing_date, "capacity": args.capacity}, verify=False)
-# print(x.text)
-data = json.loads(x.text)
-print(data["deviceId"])
-# my_list.append(data["deviceId"])
+    # print(x.text)
+    data = json.loads(x.text)
+    # print(data["deviceId"])
+    my_list.append(data["deviceId"])
+print(my_list)
 
 # df = pd.DataFrame()
 # df['deviceId'] = my_list[0::1]
